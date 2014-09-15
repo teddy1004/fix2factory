@@ -1,6 +1,6 @@
 # Fix2factory
 
-TODO: Write a gem description
+A simple tool for converting Fixtures into Factory Girls
 
 ## Installation
 
