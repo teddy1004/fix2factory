@@ -5,7 +5,7 @@ module Fix2factory
 
   APP_ROOT = '.'
 
-  TEST_FIXTURES = "#{APP_ROOT}/test/fixtures/*"
+  TEST_FIXTURES = "#{APP_ROOT}/test/fixtures/*.yml"
 
   TEST_FACTORIES = "#{APP_ROOT}/test/factories/"
   

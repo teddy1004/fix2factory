@@ -29,7 +29,7 @@ module Fix2factory
       factory_defination = []
 
       @factory_names.each do |name|
-        factory_defination << "Factory.define do"
+        factory_defination << "FactoryGirl.define do"
         factory_defination << "  factory :#{model_name}, class: #{model_name.camelize} do"
         define_attributes_for(name).each do |attr|
           factory_defination << attr
