@@ -1,0 +1,9 @@
+#! /usr/bin/env ruby
+
+require_relative '../lib/fix2factory'
+
+begin
+  converter = Fix2factory.execute
+rescue => e
+  exit 1
+end

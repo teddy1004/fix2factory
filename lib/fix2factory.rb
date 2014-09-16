@@ -1,7 +1,6 @@
 require "fix2factory/version"
 
 module Fix2factory
-  # Your code goes here...
   APP_ROOT = '.'
 
   TEST_FIXTURES = "#{APP_ROOT}/test/fixtures/*"
@@ -10,6 +9,8 @@ module Fix2factory
   
   class << self
     def execute(options)
+      puts options
+      puts "hello, world"
       Fix2factory::Converter.parse_all!(options)
     end
   end
