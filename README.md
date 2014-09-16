@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Go to your Rails app root directroy, run `fix2factory`, then it works
 
 ## Contributing
 
