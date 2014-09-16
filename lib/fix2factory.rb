@@ -7,9 +7,7 @@ module Fix2factory
 
   TEST_FIXTURES = "#{APP_ROOT}/test/fixtures/*"
 
-  TEST_FACTORY = "#{APP_ROOT}/test/factories/*"
-
-  TEST_TARGET_FILE = "#{APP_ROOT}/test/factories/factories.rb"
+  TEST_FACTORIES = "#{APP_ROOT}/test/factories/"
   
   class << self
     def execute(options)

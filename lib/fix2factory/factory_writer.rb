@@ -1,4 +1,5 @@
 module Fix2factory
+
   class FactoryWriter
     class << self
       def write(output_buffer, target_file)
@@ -8,4 +9,5 @@ module Fix2factory
       end
     end
   end
+
 end

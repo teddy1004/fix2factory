@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 4.7"
 
   spec.add_dependency "psych", "~> 2.0"
+  spec.add_dependency "activesupport", "~> 4.1"
 end

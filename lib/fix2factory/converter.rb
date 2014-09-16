@@ -3,16 +3,17 @@ require 'fix2factory/factory_writer'
 require 'fix2factory/fixture_selector'
 
 module Fix2factory
+
   class Converter
     class << self
-
       def parse_all!(options)
         matching_options = parse_matching_options(options)
         selector = FixtureSelector.new(matching_options)
-        selector.send("test_fixtures").each do |fixture_file_name|
+        selector.test_fixtures.each do |fixture_file_name|
           parser = FixtureParser.new(fixture_file_name)
           parser.parse_fixture
-          FactoryWriter.write(parser.output_buffer, Fix2factory.class_eval("TEST_TARGET_FILE"))
+          fixture_file_name.match(/(\w+)\.yml/)
+          FactoryWriter.write(parser.output_buffer, "#{Fix2factory::TEST_FACTORIES}#{$1}.rb")
         end
       end
 
@@ -20,7 +21,7 @@ module Fix2factory
         return {} unless options[:matching]
         {:matching => Regexp.new(options[:matching])}
       end
-
     end
   end
+
 end
