@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ivan.wang1004@gmail.com"]
   spec.summary       = %q{Fixtures to Factory Girl}
   spec.description   = %q{A simple tool convert Fixtures into Factory Girl}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/teddy1004/fix2factory"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
