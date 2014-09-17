@@ -50,6 +50,12 @@ module Fix2factory
       attributes.map { |attr| write_factory_attribute(name, attr) }
     end
 
+    def attributes_for(name)
+      @current_fixture[name].map do |k, v|
+        k if k != 'id'
+      end
+    end
+
     def write_factory_attribute(name, attribute)
       attr_value = @current_fixture[name][attribute]
       # String needs quotation marks in Factory Girl
